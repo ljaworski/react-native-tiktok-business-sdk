@@ -154,6 +154,7 @@ class TikTokBusinessModule: NSObject, RCTBridgeModule {
       config?.enableDebugMode()
       config?.setLogLevel(TikTokLogLevelDebug)
     }
+    config?.disableAutomaticTracking()
     TikTokBusiness.initializeSdk(config) { success, error in
       if success {
         print("[TikTokBusiness] TikTokBusiness initialized OK")
